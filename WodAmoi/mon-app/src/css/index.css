@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&family=Rajdhani:wght@600&display=swap');
+
+/* Les titres des etiquettes Wod et PR */
+.titleContainer{
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  color: black;
+  font-size: xx-large;
+}
+
+.descriptionContainer {
+  font-size: medium;
+}
+
+.blocUnderHeader {
+  height: 100px;
+}
+
+/* Remonter le contenu des pages dans le bloc <p> juste sous le header 
+Pour faire l'effet de cadre */
+.profile,
+.PositionDansHerder {
+  position: absolute;
+  top: 200px;
+  transform: translateX(12.5%);
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px; 
+  border: 1px solid #d6d6c2; 
+}
+
+/* Remonter le contenu de la page d'accueil dans le bloc <p> juste sous le header 
+Pour faire l'effet de cadre */
+.containerHome {
+  position: absolute;
+  top: 160px;
+  transform: translateX(12.5%);
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;  
+}
+
+/* Responsive images de la page d'accueil */
+.imagesHome {
+  max-width: 100%;
+	-ms-interpolation-mode: bicubic;
+	image-rendering: optimizeQuality;
+}
+.imagesHome:hover {
+  opacity: 0.8;
+}
+
+/* Position des modals */
+.wodTab,
+.prTab
+ {
+  position: absolute;
+  top: 160px;
+  transform: translateX(12.5%);
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Couleur de l'ecriture des onglets des modals */
+.wodTab a,
+.prTab a {
+  color: white;
+}
+.wodTab a:hover,
+.prTab a:hover {
+  color: #495057;
+}
+/* Supprimer la border bottom des tableaux  */
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+/* Alignement centré de la page d'accueil */
+.containerHome {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #d6d6c2;
+}
+
+/* Alignement des etiquettes des wods ou des PR */
+ .container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  column-gap: 20px;
+}
+
+/* Alignement des etiquettes des wods ou des PR (suite) */
+.wod-container {
+  padding: 10px;
+  text-align: center;
+  flex: 1 1 300px;
+}
+
+/* Create modal */
+.modal-content {
+  margin-top: 6px;
+  top: 40px;
+}
+
+.logoHeader{
+  height: 9rem; 
+  width: 9rem;
+}
+
+/* Taille et position des trois petits points pour delete les PR */
+.containerBtnSvgPoints{
+  position: relative;
+}
+.btnSvgPoints{
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 0em;
+  transform: translateY(-50%);
+}
+
+/* Taille de la bar de recherche */
+.searchBarContainer{
+  width: 50% ;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Position generale des logo hearder */
+.topnav {
+  position: relative;
+  overflow: hidden;
+  padding-top:10em;
+}
+
+/* Position du logo Wodamoi dans le header*/
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Position du login/logout dans le header */
+.topnav-right {
+  float: right;
+  position: absolute;
+  right:0%;
+  top: 10%;
+}
+
+/* Taille du login/logout */
+.img-fluid {
+  max-width: 30% !important;
+}
+
+/* Taille logo homme ou femme entre les boutons refresh et create dans PR */
+#Capa_1 {
+  max-width: 10% !important;
+}
+
+.chart {
+  position: absolute;
+  top: 55%;
+  left: -25px;
+  right: 25px;
+  text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 864px) {
+	.wod-container {
+    flex: 1 1 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	/* Les titres des etiquettes Wod et PR */
+  .titleContainer{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    color: black;
+    font-size: large;
+  }
+  .descriptionContainer {
+    font-size: small;
+  }
+
+  /* Alignement des etiquettes des wods ou des PR (suite) */
+  .wod-container {
+    flex: 1 1 200px;
+  }
+
+  /* Logo Wodamoi */
+  .logoHeader{
+    height: 5rem; 
+    width: 5rem;
+  }
+  .topnav-centered a {
+    top: 35%;
+  }
+
+  /* Logo logout */
+  .topnav-right {
+    right:-10%;
+  }
+  .img-fluid {
+    max-width: 20% !important;
+  }
+
+  /* Bloc pour faire l'effet sous le header */
+  .blocUnderHeader {
+    height: 40px;
+  }
+
+  /* Home */
+  .containerHome {
+    top: 115px;
+  }
+  .imagesHome {
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality;
+  }
+  a.imagesHomeLink {
+    max-width: 50%;
+  }
+
+  /* Remonter les pages dans le p du navbar */
+  .profile,
+  .PositionDansHerder {
+    top: 140px;
+  }
+
+  /* Tabs */
+  .wodTab,
+  .prTab
+  {
+    top: 105px;
+    font-size: 0.8rem;
+  }
+  .wodTab.nav-link,
+  .prTab.nav-link {
+    padding: 0.3rem 1rem;
+  }
+
+  /* SearchBar */
+  .searchBarContainer {
+    width: 90% ;
+  }
+  .text-center {
+    font-size: 0.8rem !important;
+  }
+
+  /* Tout les boutons */
+  .btn{
+    font-size: 0.9rem !important;
+  }
+  .btn.mb-4 {
+    margin-bottom: 0rem !important;
+  }
+  .btn.mt-4 {
+    margin-top: 1rem !important;
+  }
+
+  /* Les colonnes des etiquettes sont élargis */
+  .col {
+    padding-right: 0px !important;
+  }
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+}
